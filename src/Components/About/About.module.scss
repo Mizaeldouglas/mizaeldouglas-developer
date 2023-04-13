@@ -1,0 +1,64 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.about {
+    @include max-width;
+    margin-bottom: $marginBottom;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10rem;
+
+    @include device(mobile) {
+        margin-bottom: $marginBottomMobile;
+    }
+
+    @include device(tablet) {
+        flex-direction: column;
+    }
+
+
+    .image {
+        width: 45rem;
+        height: 53rem;
+        position: relative;
+
+        .box {
+            position: absolute;
+            top: -5rem;
+            left: -1rem;
+        }
+
+        .img {
+            border-radius: 10px;
+
+        }
+
+        @include device(tablet) {
+            margin-bottom: 3rem;
+        }
+
+    }
+
+    .content {
+        width: 100%;
+        max-width: 60rem;
+
+        h2 {
+            color: $primary;
+        }
+
+        a {
+            margin-top: 1.5rem;
+        }
+
+        p {
+            color: $colorText;
+        }
+
+        span {
+            color: white;
+        }
+    }
+
+}

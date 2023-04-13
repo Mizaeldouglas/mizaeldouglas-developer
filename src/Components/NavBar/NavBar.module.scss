@@ -2,10 +2,13 @@
 @import "styles/mixins.scss";
 
 .navbar-wrapper {
-  background-color: transparent;
+  background-color: $background;
   position: fixed;
   width: 100%;
   z-index: 10;
+  @include device(tablet) {
+    background-color: transparent;
+  }
 
   .navbar {
     @include max-width;

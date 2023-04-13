@@ -6,6 +6,7 @@
   position: fixed;
   width: 100%;
   z-index: 10;
+
   @include device(tablet) {
     background-color: transparent;
   }

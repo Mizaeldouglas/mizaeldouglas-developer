@@ -4,13 +4,12 @@ import Header from "src/Components/Header/Header";
 import Projects from "src/Components/Projects/Projects";
 import Skills from "src/Components/Skills/Skills";
 import client from "src/sanity";
-import Aos from 'aos'
+import Aos from "aos";
 import { useEffect } from "react";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
 import Head from "next/head";
 import Navbar from "src/Components/NavBar/NavBar";
 import SocialMedia from "src/Components/SocialMedia/SocialMedia";
-
 
 export default function Home({
   header,
@@ -26,7 +25,6 @@ export default function Home({
 
   return (
     <>
-
       <SocialMedia social={social} />
       <Navbar />
       <Header header={header} social={social} />
@@ -40,9 +38,8 @@ export default function Home({
         <Footer footer={footer} />
       </main>
     </>
-  )
+  );
 }
-
 
 export const getStaticProps = async () => {
   const header = await client.fetch(`*[_type == "header"][0]`);

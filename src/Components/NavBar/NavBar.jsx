@@ -24,14 +24,14 @@ const Navbar = () => {
             <Navlink url="#about" text="Sobre Mim" />
             <Navlink url="#skills" text="Experiências" />
             <Navlink url="#projects" text="Projetos" />
-            <Link
+            {/* <Link
               className={styles.link}
               href="/ContactForm"
               as="/contato"
               id="contato"
             >
               Contato
-            </Link>
+            </Link> */}
             <Navlink
               url="https://drive.google.com/file/d/1iwkBpv9OtwiS7yb1sQoRhxOAmFtb-5lI/view"
               target="_blank"
@@ -66,13 +66,13 @@ const Navbar = () => {
                   text="Projetos"
                   toggleMenu={() => setIsMenu(!isMenu)}
                 />
-                <Link
+                {/* <Link
                   className={styles.link}
                   href="/ContactForm"
                   as="/projetos"
                 >
                   Contato
-                </Link>
+                </Link> */}
                 <Navlink
                   target="_blank"
                   url="https://drive.google.com/file/d/1iwkBpv9OtwiS7yb1sQoRhxOAmFtb-5lI/view"

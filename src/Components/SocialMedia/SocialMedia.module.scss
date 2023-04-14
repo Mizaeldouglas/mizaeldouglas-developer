@@ -1,55 +1,69 @@
-@import 'styles/variables.scss';
-@import 'styles/mixins.scss';
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
 
 .social {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2.5rem;
-    padding: 2.5rem;
-    background-color: $lightPrimary;
-    position: fixed;
-    top: 4rem;
-    right: 2rem;
-    z-index: 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  background-color: $lightPrimary;
+  position: fixed;
+  top: 4rem;
+  right: 2rem;
+  z-index: 12;
 
-    @include device(notebook) {
-        flex-direction: row;
-        background-color: transparent;
-        position: static;
-        margin-bottom: 2rem;
+  @include device(mobile) {
+    width: 5rem;
+    padding-right: 68%;
+    background-color: transparent;
+    gap: 3rem;
+  }
+
+  @include device(notebook) {
+    flex-direction: row;
+    position: static;
+  }
+
+  .icon {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .linkedin {
+    color: $background;
+
+    &:hover {
+      cursor: pointer;
+      color: $colorText;
     }
-
-    .icon {
-        width: 2.2rem;
-        height: 2.2rem;
+    @include device(mobile) {
+      color: $colorText;
     }
+  }
 
-    .linkedin {
-        color: $background;
+  .instagram {
+    color: $background;
 
-        &:hover {
-            cursor: pointer;
-            color: $colorText;
-        }
+    &:hover {
+      cursor: pointer;
+      color: $colorText;
     }
-
-    .instagram {
-        color: $background;
-
-        &:hover {
-            cursor: pointer;
-            color: $colorText;
-        }
+    @include device(mobile) {
+      color: $colorText;
     }
+  }
 
-    .whatsapp {
-        color: $background;
+  .whatsapp {
+    color: $background;
 
-        &:hover {
-            cursor: pointer;
-            color: $colorText;
-        }
+    &:hover {
+      cursor: pointer;
+      color: $colorText;
     }
+    @include device(mobile) {
+      color: $colorText;
+    }
+  }
 }
